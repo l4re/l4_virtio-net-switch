@@ -3,12 +3,16 @@
 [comment]: # (This is a generated file. Do not change it.)
 [comment]: # (Instead, change capdb.yml.)
 
+
+## Description {#l4re_servers_vio_switch_description}
+
 The virtual network switch connects multiple clients with a virtual network
 connection. It uses Virtio as the transport mechanism. Each virtual switch port
 implements the host-side of a Virtio network device (virtio-net).
 
 
-## Capabilities
+<hr>
+## Capabilities {#l4re_servers_vio_switch_capabilities}
 
 * `dataspace`
 
@@ -24,7 +28,8 @@ implements the host-side of a Virtio network device (virtio-net).
   Mandatory capability.
 
 
-## Command Line Options
+<hr>
+## Command Line Options {#l4re_servers_vio_switch_cmdline_options}
 
 In the example above the virtual network switch is started in its default
 configuration with a maximum of 5 virtual ports. To customize the configuration
@@ -103,10 +108,11 @@ the virtual network switch accepts the following command line options:
 
   Name of a provided capability that adheres to the dataspace protocol.
 
-The virtual network switch can be setup to feature exactly one monitor port. All
-traffic passing through the switch is mirrored to the monitor port. The monitor
-port is read-only, and has no TX capability. An optional packet filter can be
-configured and implemented to filter data sent to the monitor port.
+<hr> The virtual network switch can be setup to feature exactly one monitor
+port. All traffic passing through the switch is mirrored to the monitor port.
+The monitor port is read-only, and has no TX capability. An optional packet
+filter can be configured and implemented to filter data sent to the monitor
+port.
 
 ## Configuration
 
@@ -139,7 +145,7 @@ To plug hardware devices into the switch, provide a Vbus capability with the
 name `vbus` when starting the switch. To use this feature, you have to enable
 the `VNS_IXL` config option.
 
-## Virtual switch port
+## Virtual switch port {#l4re_servers_vio_switch_param_virtual_switch_port}
 
 First, a virtual network port has to be created using the following Ned-Lua
 function. It has to be called on the communication channel called `switch`,
@@ -229,7 +235,8 @@ network switch using the Virtio network protocol.
 
 
 
-## Examples
+<hr>
+## Examples {#l4re_servers_vio_switch_examples}
 
 Here are couple of examples on how to create ports with different properties:
 
