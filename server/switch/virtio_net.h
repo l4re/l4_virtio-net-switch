@@ -138,7 +138,9 @@ public:
   L4virtio::Svr::Dev_config_t<Net_config_space> _dev_config;
 
   explicit Virtio_net(unsigned vq_max)
-  : L4virtio::Svr::Device(&_dev_config),
+  : L4virtio::Svr::Device(&_dev_config,
+                          Dbg{Dbg::Virtio, Dbg::Warn},
+                          Dbg{Dbg::Virtio, Dbg::Debug}),
     _dev_config(L4VIRTIO_VENDOR_KK, L4VIRTIO_ID_NET, 2),
     _vq_max(vq_max)
   {
